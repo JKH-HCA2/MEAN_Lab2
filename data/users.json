@@ -1,0 +1,22 @@
+[
+  {
+    "email": "foobar@test.com",
+    "username": "foobar",
+    "password": "password"
+  },
+  {
+    "email": "bizbaz@test.com",
+    "username": "bizbaz",
+    "password": "password"
+  },
+  {
+    "email": "bingbang@test.com",
+    "username": "bingbang",
+    "password": "password"
+  },
+  {
+    "email": "pingpang@test.com",
+    "username": "pingpang",
+    "password": "password"
+  }
+]
