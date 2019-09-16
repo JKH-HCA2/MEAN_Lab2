@@ -6,12 +6,14 @@ const authorization = require('./../utils/auth')
 
 /* GET login page. */
 router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Express' });
+  res.render('login', { loginLogout: `<li class="nav-item">
+  <a class="nav-link" href="/users/login">Login</a>
+</li>` });
 });
 
 /* GET register page*/
 router.get('/register', function(req, res, next) {
-  res.render('register', { title: 'Express' });
+  res.render('register', { title: 'Register' });
 });
 
 router.post('/register', function(request, response, next) {
@@ -23,6 +25,7 @@ router.post('/register', function(request, response, next) {
   if (user) {
       console.log(`Success`)
       response.statusCode = 200;
+      window.location.href = "/teams"
       response.end();
   } else {
       response.statusCode = 403; // Forbidden
@@ -38,7 +41,7 @@ router.post('/login', function(request, response) {
   var email = request.body.email;
   var password = request.body.password;
   if (authorization.authorize(email, password, users)) {
-      response.statusCode = 200;
+      response.statusCode = 200;      
       response.end();
   } else {
       response.statusCode = 403; // Forbidden

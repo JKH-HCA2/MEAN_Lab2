@@ -26,10 +26,11 @@ $(document).ready(function () {
       $.post("/users/login", data, function () {
       })
         .done(function (res) {
+          /*
           $('#msg').removeClass('alert-danger');
           $('#msg').addClass('alert-success');
           $('#msg').html('Success!');
-    
+          
           $('#inputEmail').val('');
           $('#inputEmail').attr("disabled", true);
           $('#inputPassword').val('');
@@ -40,6 +41,8 @@ $(document).ready(function () {
           $('#submitBtn').hide();
           $('#logoutBtn').show();
           $('#logoutBtn').focus();
+          */
+          window.location.href = "/teams/"
         })
         .fail(function (e) {
           if (e.status === 401) {
@@ -70,22 +73,24 @@ $(document).ready(function () {
       $.post("/users/register", data, function () {
       })
         .done(function (res) {
+          /*
           $('#msg').removeClass('alert-danger');
           $('#msg').addClass('alert-success');
           $('#msg').html('Success!');
-    
+          
           $('#inputEmail').val('');
           $('#inputUsername').val('');
           $('#inputPassword').val('');
     
           $('#registerBtn').hide();
-          window.location.href = "/users/login"
+          */
+          window.location.href = "/teams/"
         })
         .fail(function (e) {
           if (e.status === 401) {
             $('#msg').html('Account locked!');
           } else if (e.status === 403) {
-            $('#msg').html('Invalid Creds!');
+            $('#msg').html('User already exists!');
           } else {
             $('#msg').html(`Error: ${e.status}`);
           }

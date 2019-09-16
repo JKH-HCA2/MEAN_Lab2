@@ -6,13 +6,29 @@ router.get('/', (req, res, next) => {
     res.render('leagues', { title: 'Leagues' });
 })
 
-router.get('/data', function(req, res, next) {
+/* GET register page*/
+router.get('/teams', function(req, res, next) {
+    res.render('teams', { title: 'View Teams' });
+  });
+
+/* GET register page*/
+router.get('/registerteams', function(req, res, next) {
+    res.render('registerteams', { title: 'Register a Team' });
+  });
+
+router.get('/data/', function(req, res, next) {
     try {
         res.end(fs.readFileSync('./data/leagues.json'));
     } catch (err) {
         res.end('[]');
     }
 });
-
+router.get('/data/:id', function(req, res, next) {
+    try {
+        res.end(fs.readFileSync('./data/leagues.json'));
+    } catch (err) {
+        res.end('[]');
+    }
+});
 
 module.exports = router;

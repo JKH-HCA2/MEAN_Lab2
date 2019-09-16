@@ -14,34 +14,36 @@
                     <a class="nav-link" href="/leagues/teams">Teams </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/users/register">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/users/login">Login</a>
+                    <a class="nav-link" href="/">Logout</a>
                 </li>
             </ul>
         </div>
     </nav>
 </header>
+
 <main>
-    <div>
-        <form class="form-login border mt-5 p-3 rounded-lg text-center" id="form-login">
+    <div class="text-center container-fluid border border-dark p-5 rounded-lg mx-auto mt-5" id="dataDisplay">
+        <h1 class="display-4">Team Lookup</h1>
+        <div id="lookupContainer" class="container-fluid mt-4">
+            <!-- 
+                    <label for="searchBy">Search By:</label>
+                    <select id="searchBy" name="searchBy" class="selectors custom-select">
+                        <option selected disabled>Choose a filter</option>
+                        <option value="League">League</option>
+                        <option value="Team">Team</option>
+                        <option value="Number of Members"># of Team Members</option>
+                        <option value="All">View All</option>
+                    </select>
+                </div>
+                -->
+            <div id="tableContainer" class="container-fluid">
 
-            <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
-
-            <label for="inputEmail" class="sr-only">Email Address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus />
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control mt-1" placeholder="Password" required />
-
-            <button class="btn btn-lg btn-primary btn-block mt-1" type="submit" id="submitBtn">Log in</button>
-            <button class="btn btn-lg btn-info btn-block hidden" type="button" id="logoutBtn">Log out</button>
-
-            <br />
-            <div class="alert alert-success hidden" role="alert" id="msg"></div>
-        </form>
-    </div>
+            </div>
+        </div>
 </main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -49,4 +51,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-<script src="/js/scripts.js"></script>
+<script src="/js/teams.js"></script>
